@@ -1,12 +1,20 @@
-import { createAppContainer, createSwitchNavigator } from 'react-navigation'
-import Login from './pages/Login/Login'
-import Home from './pages/Home/Home'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react'
 
-const Routes = createAppContainer(
-    createSwitchNavigator({
-        // Login,
-        Home,
-    })
-);
+const AppStack = createStackNavigator();
+import Login from './pages/Login';
+import Home from './pages/Home';
+import Bill from './pages/Bill';
 
-export default Routes
+export default function Routes(){
+    return(
+        <NavigationContainer>
+        <AppStack.Navigator screenOptions={ {headerShown: false} }>
+                <AppStack.Screen name="Home" component={Home} />
+                <AppStack.Screen name="Login" component={Login} />
+                <AppStack.Screen name="Bill" component={Bill} />
+        </AppStack.Navigator>
+        </NavigationContainer>
+    );
+}
