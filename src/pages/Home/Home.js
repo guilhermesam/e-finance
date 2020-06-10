@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, Text, View } from 'react-native'
 
 export default function Home() {
     return (
@@ -16,6 +16,14 @@ export default function Home() {
         </View>
     )
 }
+
+const bills = [
+    {
+        id: 1,
+        name: 'Mercado X',
+        establishmentType: 'Supermercado'
+    }
+]
 
 const styles = StyleSheet.create({
     container: {
