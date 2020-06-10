@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, Text, TouchableOpacity, View } from 'react-native'
+import { FlatList, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
 import styles from './styles'
@@ -10,6 +10,14 @@ export default function Home() {
     
     function navigateToBill() {
         navigation.navigate('Bill')
+    }
+
+    function navigateToStatistics() {
+        navigation.navigate('Statistics')
+    }
+
+    function navigateToHistoric() {
+        navigation.navigate('Historic')
     }
 
     return (
@@ -28,20 +36,32 @@ export default function Home() {
                     renderItem={({ item: bills }) => (
                         <View style={styles.billsList}>
                             <View style={styles.establishmentInfo}>
-                                <Text style={styles.establishmentName}>{bills.name}</Text>
-                                <Text style={styles.establishmentType}>{bills.establishmentType}</Text>
+                                <Text style={styles.mainText}>{bills.name}</Text>
+                                <Text style={styles.subText}>{bills.establishmentType}</Text>
                             </View>
                             <View style={styles.buyInfo}>
-                                <Text style={styles.establishmentName}>{bills.value}</Text>
-                                <Text style={styles.establishmentType}>{bills.date}</Text>
+                                <Text style={styles.mainText}>{bills.value}</Text>
+                                <Text style={styles.subText}>{bills.date}</Text>
                             </View>
                         </View>
                     )}
                 />
             </View>
-            <TouchableOpacity style={styles.button} onPress={navigateToBill}>
-                <Feather name="plus" size={35} color="#FFF" />
-            </TouchableOpacity>
+            <View style={styles.buttonContainer}>
+                <TouchableOpacity style={styles.button} onPress={navigateToBill}>
+                    <Feather name="plus-circle" size={35} color="#FFF"/>
+                    <Text style={styles.buttonText}>Adicionar Conta</Text>
+                </TouchableOpacity> 
+                <TouchableOpacity style={styles.button} onPress={navigateToStatistics}>
+                    <Feather name="pie-chart" size={35} color="#FFF"/>
+                    <Text style={styles.buttonText}>Estatísticas</Text>
+                </TouchableOpacity>       
+                <TouchableOpacity style={styles.button} onPress={navigateToHistoric}>
+                    <Feather name="clock" size={35} color="#FFF"/>
+                    <Text style={styles.buttonText}>Histórico</Text>
+                </TouchableOpacity>                
+            </View>
+            
         </View>
     )
 }
@@ -160,3 +180,10 @@ const bills = [
         date: '01/06/2020'
     },
 ]
+
+{/* <TouchableOpacity style={styles.button} onPress={navigateToBill}>
+                <Feather name="plus" size={35} color="#FFF" />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={navigateToStatistics}>
+                <Feather name="plus" size={35} color="#FFF" />
+            </TouchableOpacity> */}
