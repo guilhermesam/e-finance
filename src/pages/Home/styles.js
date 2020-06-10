@@ -9,24 +9,32 @@ const styles = StyleSheet.create({
     },
 
     billsList: {
-        
+        padding: 5,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginHorizontal: 10,
+    },
+
+    buyInfo:{
+        alignItems: 'flex-start',
     },
      
     form: {
         alignSelf: 'stretch',
-        paddingHorizontal: 30,
         marginHorizontal: 30,
         borderRadius: 16,
         backgroundColor: '#FFF',
-        height: 500,
-        marginTop: 50
+        height: 550,
+        marginTop: 50,
     },
 
     headerText: {
         color: '#444',
+        fontSize: 16,
         fontWeight: 'bold',
-        marginTop: 10,
         borderBottomWidth: StyleSheet.hairlineWidth,
+        padding: 15,
+        color: '#006DFF'
     },
 
     headerContainer: {
@@ -34,11 +42,27 @@ const styles = StyleSheet.create({
        alignSelf: 'stretch'
     }, 
 
+    establishmentName: {
+        fontSize: 12,
+        marginBottom: 5,
+    },
+
+    establishmentType: {
+        fontSize: 10,
+        color: '#AAAAAA',
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        marginBottom: 5,
+    }, 
+    
+    value: {
+        fontSize: 12,
+    },
+
     month: {
         color: '#C0C0C0',
         fontSize: 20,
         fontWeight: 'bold',
-        alignSelf: 'flex-start',
+        alignSelf: 'flex-end',
         marginLeft: 30
     },
 
@@ -46,7 +70,7 @@ const styles = StyleSheet.create({
         color: '#AAAAAA',
         fontSize: 14, 
         fontWeight: 'bold',
-        marginLeft: 10
+        marginLeft: 10,
     }
 })
 
