@@ -1,8 +1,17 @@
 import React from 'react'
-import { FlatList, ListView, Text, TouchableHighlight, View } from 'react-native'
+import { FlatList, Text, TouchableOpacity, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { Feather } from '@expo/vector-icons'
 import styles from './styles'
 
 export default function Home() {
+
+    const navigation = useNavigation();
+    
+    function navigateToBill() {
+        navigation.navigate('Bill')
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
@@ -30,6 +39,9 @@ export default function Home() {
                     )}
                 />
             </View>
+            <TouchableOpacity style={styles.button} onPress={navigateToBill}>
+                <Feather name="plus" size={35} color="#FFF" />
+            </TouchableOpacity>
         </View>
     )
 }

@@ -11,12 +11,16 @@ const styles = StyleSheet.create({
     billsList: {
         padding: 5,
         flexDirection: 'row',
-        justifyContent: 'space-between',
         marginHorizontal: 10,
     },
 
     buyInfo:{
-        alignItems: 'flex-start',
+        flex: 1,
+        alignSelf: 'flex-end'
+    },
+
+    establishmentInfo: {
+        flex: 1
     },
      
     form: {
@@ -56,6 +60,17 @@ const styles = StyleSheet.create({
     
     value: {
         fontSize: 12,
+    },
+
+    button: {
+        height: 50,
+        width: 50,
+        backgroundColor: '#4E00FF',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignSelf: 'flex-end',
+        marginRight: 30,
+        borderRadius: 180
     },
 
     month: {
