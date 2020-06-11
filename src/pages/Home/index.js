@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, ScrollView, Text, TouchableOpacity, View } from 'react-native'
+import { FlatList, Text, TouchableOpacity, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
 import styles from './styles'
@@ -10,6 +10,14 @@ export default function Home() {
     
     function navigateToBill() {
         navigation.navigate('Bill')
+    }
+
+    function navigateToSettings() {
+        navigation.navigate('Settings')
+    }
+
+    function navigateToHelp() {
+        navigation.navigate('Help')
     }
 
     function navigateToStatistics() {
@@ -23,8 +31,18 @@ export default function Home() {
     return (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
-                <Text style={styles.month}>JUN</Text>
-                <Text style={styles.year}>2020</Text>
+                <View style={styles.topButtonContainer}>
+                    <TouchableOpacity style={styles.topButton} onPress={navigateToHelp}>
+                        <Feather name="help-circle" size={35} color="#FFF"/>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.topButton} onPress={navigateToSettings}>
+                        <Feather name="settings" size={35} color="#FFF"/>
+                    </TouchableOpacity>  
+                </View>
+                <View style={styles.dateContainer}>
+                    <Text style={styles.month}>JUN</Text>
+                    <Text style={styles.year}>2020</Text>
+                </View>
             </View>
             <View style={styles.form}>
                 <Text style={styles.headerText}>
@@ -47,16 +65,16 @@ export default function Home() {
                     )}
                 />
             </View>
-            <View style={styles.buttonContainer}>
-                <TouchableOpacity style={styles.button} onPress={navigateToBill}>
+            <View style={styles.bottomButtonContainer}>
+                <TouchableOpacity style={styles.bottomButton} onPress={navigateToBill}>
                     <Feather name="plus-circle" size={35} color="#FFF"/>
                     <Text style={styles.buttonText}>Adicionar Conta</Text>
                 </TouchableOpacity> 
-                <TouchableOpacity style={styles.button} onPress={navigateToStatistics}>
+                <TouchableOpacity style={styles.bottomButton} onPress={navigateToStatistics}>
                     <Feather name="pie-chart" size={35} color="#FFF"/>
                     <Text style={styles.buttonText}>Estatísticas</Text>
                 </TouchableOpacity>       
-                <TouchableOpacity style={styles.button} onPress={navigateToHistoric}>
+                <TouchableOpacity style={styles.bottomButton} onPress={navigateToHistoric}>
                     <Feather name="clock" size={35} color="#FFF"/>
                     <Text style={styles.buttonText}>Histórico</Text>
                 </TouchableOpacity>                

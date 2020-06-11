@@ -5,30 +5,62 @@ const styles = StyleSheet.create({
 container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#006DFF'
 },
     headerContainer: {
         flex: 1,
-        flexDirection: 'row', 
-        alignSelf: 'stretch'
+        paddingLeft: 10,
+        paddingRight: 20,
+        alignItems: 'stretch',
     },
 
-        month: {
-            color: '#C0C0C0',
-            fontSize: 20,
-            fontWeight: 'bold',
-            alignSelf: 'flex-end',
-            marginLeft: 30
+        dateContainer: {
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            alignSelf: 'center',
         },
 
-        year: {
-            color: '#AAAAAA',
-            fontSize: 14, 
-            fontWeight: 'bold',
-            alignSelf: 'flex-end',
-            marginLeft: 10,
-        },
+            month: {
+                color: '#C0C0C0',
+                fontSize: 22,
+                fontWeight: 'bold',
+            },
+
+            year: {
+                color: '#AAAAAA',
+                fontSize: 14, 
+                fontWeight: 'bold',
+            },
+
+        topButtonContainer: {
+                flex: 1,
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+                marginTop: 30
+            },
+
+            topButton: {
+                borderBottomWidth: StyleSheet.hairlineWidth,
+                borderTopWidth: StyleSheet.hairlineWidth,
+                borderLeftWidth: StyleSheet.hairlineWidth,
+                borderRightWidth: StyleSheet.hairlineWidth, 
+                borderRadius: 5,
+                marginLeft: 10,
+                backgroundColor: 'rgba(255,255,255,0.20)',
+                width: 60,
+                height: 60,
+                justifyContent: 'center',
+                alignItems: 'center',
+            },
+
+            year: {
+                color: '#AAAAAA',
+                fontSize: 14, 
+                fontWeight: 'bold',
+            },
+            
 
     form: {
         flex: 2,
@@ -78,33 +110,33 @@ container: {
                     marginBottom: 5,
                 }, 
     
-    buttonContainer: {
+    bottomButtonContainer: {
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
         paddingLeft: 10,
-        paddingRight: 20
+        paddingRight: 20,
     },
 
-    button: {
-        borderBottomWidth: StyleSheet.hairlineWidth,
-        borderTopWidth: StyleSheet.hairlineWidth,
-        borderLeftWidth: StyleSheet.hairlineWidth,
-        borderRightWidth: StyleSheet.hairlineWidth, 
-        borderRadius: 5,
-        marginLeft: 10,
-        backgroundColor: 'rgba(255,255,255,0.20)',
-        padding: 10,
-        width: 120,
-        height: 120,
-        justifyContent: 'center',
-        alignItems: 'center',
-    }, 
+        bottomButton: {
+            borderBottomWidth: StyleSheet.hairlineWidth,
+            borderTopWidth: StyleSheet.hairlineWidth,
+            borderLeftWidth: StyleSheet.hairlineWidth,
+            borderRightWidth: StyleSheet.hairlineWidth, 
+            borderRadius: 5,
+            marginLeft: 10,
+            backgroundColor: 'rgba(255,255,255,0.20)',
+            padding: 10,
+            width: 120,
+            height: 120,
+            justifyContent: 'center',
+            alignItems: 'center',
+        }, 
 
-    buttonText: {
-        fontSize: 12,
-        color: '#FFF'
-    },    
+        buttonText: {
+            fontSize: 12,
+            color: '#FFF'
+        },    
 })
 
 export default styles
