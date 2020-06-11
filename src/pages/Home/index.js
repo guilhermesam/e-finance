@@ -1,8 +1,18 @@
-import React from 'react'
-import { FlatList, ListView, Text, TouchableHighlight, View } from 'react-native'
-import styles from './styles'
+import React from 'react';
+import { FlatList, Text,  View, TouchableOpacity } from 'react-native';
+import styles from './styles';
+import { useNavigation } from '@react-navigation/native';
+import { Feather } from '@expo/vector-icons';
 
 export default function Home() {
+    const navigation = useNavigation();
+
+    function navigateToBill() {
+        navigation.navigate('AddAnimal')
+    }
+  
+   
+   
     return (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
@@ -25,6 +35,12 @@ export default function Home() {
                             <View style={styles.buyInfo}>
                                 <Text style={styles.establishmentName}>{bills.value}</Text>
                                 <Text style={styles.establishmentType}>{bills.date}</Text>
+                                <TouchableOpacity style={styles.Button} onPress={navigateToBill}>
+                    <Feather name="plus" size={35} color="#000000" />
+                </TouchableOpacity>
+
+
+
                             </View>
                         </View>
                     )}
