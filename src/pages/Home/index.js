@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { FlatList, Text,  View, TouchableOpacity } from 'react-native';
-import styles from './styles';
-import { useNavigation } from '@react-navigation/native';
-import { Feather } from '@expo/vector-icons';
-
-export default function Home() {
-    const navigation = useNavigation();
-
-    function navigateToBill() {
-        navigation.navigate('AddAnimal')
-    }
-  
-   
-   
-=======
 import React from 'react'
 import { FlatList, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
@@ -37,7 +20,6 @@ export default function Home() {
         navigation.navigate('Historic')
     }
 
->>>>>>> 24399d98bea034822b4d23b25a0ccb8bcafc5cc1
     return (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
@@ -58,19 +40,8 @@ export default function Home() {
                                 <Text style={styles.subText}>{bills.establishmentType}</Text>
                             </View>
                             <View style={styles.buyInfo}>
-<<<<<<< HEAD
-                                <Text style={styles.establishmentName}>{bills.value}</Text>
-                                <Text style={styles.establishmentType}>{bills.date}</Text>
-                                <TouchableOpacity style={styles.Button} onPress={navigateToBill}>
-                    <Feather name="plus" size={35} color="#000000" />
-                </TouchableOpacity>
-
-
-
-=======
                                 <Text style={styles.mainText}>{bills.value}</Text>
                                 <Text style={styles.subText}>{bills.date}</Text>
->>>>>>> 24399d98bea034822b4d23b25a0ccb8bcafc5cc1
                             </View>
                         </View>
                     )}
