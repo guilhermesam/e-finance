@@ -1,6 +1,15 @@
-import React from 'react'
-import { View } from 'react-native'
+import React from 'react';
+import { FlatList, View } from 'react-native';
+import styles from './styles';
 
 export default function Historic() {
-    return (<View/>)
+    return (
+        <View style={styles.container}>
+            <View style={styles.mainFrame}>
+                <FlatList
+                    
+                />
+            </View>
+        </View>
+    ) 
 }
