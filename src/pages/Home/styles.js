@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
 container: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#006DFF'
+    backgroundColor: 'white'
 },
     headerContainer: {
         flex: 1,
@@ -63,9 +63,8 @@ container: {
             
 
     form: {
-        flex: 2,
+        flex: 3,
         alignSelf: 'stretch',
-        marginHorizontal: 30,
         borderRadius: 16,
         backgroundColor: '#FFF',
         marginTop: 50,
@@ -114,6 +113,7 @@ container: {
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'center',
         paddingLeft: 10,
         paddingRight: 20,
     },
@@ -125,16 +125,16 @@ container: {
             borderRightWidth: StyleSheet.hairlineWidth, 
             borderRadius: 5,
             marginLeft: 10,
-            backgroundColor: 'rgba(255,255,255,0.20)',
+            backgroundColor: 'rgba(0, 109, 255, 0.5)',
             padding: 10,
-            width: 120,
-            height: 120,
-            justifyContent: 'center',
+            width: 100,
+            height: 100,
+            justifyContent: 'space-around',
             alignItems: 'center',
         }, 
 
         buttonText: {
-            fontSize: 12,
+            fontSize: 10,
             color: '#FFF'
         },    
 })
