@@ -33,10 +33,10 @@ export default function Home() {
             <View style={styles.headerContainer}>
                 <View style={styles.topButtonContainer}>
                     <TouchableOpacity style={styles.topButton} onPress={navigateToHelp}>
-                        <Feather name="help-circle" size={35} color="#FFF"/>
+                        <Feather name="help-circle" size={35} color="rgba(0, 109, 255, 0.6)"/>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.topButton} onPress={navigateToSettings}>
-                        <Feather name="settings" size={35} color="#FFF"/>
+                        <Feather name="settings" size={35} color="rgba(0, 109, 255, 0.6)"/>
                     </TouchableOpacity>  
                 </View>
                 <View style={styles.dateContainer}>
@@ -67,15 +67,15 @@ export default function Home() {
             </View>
             <View style={styles.bottomButtonContainer}>
                 <TouchableOpacity style={styles.bottomButton} onPress={navigateToBill}>
-                    <Feather name="plus-circle" size={35} color="#FFF"/>
+                    <Feather name="plus-circle" size={45} color="#rgba(0, 109, 255, 0.6)"/>
                     <Text style={styles.buttonText}>Adicionar Conta</Text>
                 </TouchableOpacity> 
                 <TouchableOpacity style={styles.bottomButton} onPress={navigateToStatistics}>
-                    <Feather name="pie-chart" size={35} color="#FFF"/>
+                    <Feather name="pie-chart" size={45} color="#rgba(0, 109, 255, 0.6)"/>
                     <Text style={styles.buttonText}>Estatísticas</Text>
                 </TouchableOpacity>       
                 <TouchableOpacity style={styles.bottomButton} onPress={navigateToHistoric}>
-                    <Feather name="clock" size={35} color="#FFF"/>
+                    <Feather name="clock" size={45} color="#rgba(0, 109, 255, 0.6)"/>
                     <Text style={styles.buttonText}>Histórico</Text>
                 </TouchableOpacity>                
             </View>

@@ -23,13 +23,13 @@ container: {
 
             month: {
                 color: '#C0C0C0',
-                fontSize: 22,
+                fontSize: 24,
                 fontWeight: 'bold',
             },
 
             year: {
                 color: '#AAAAAA',
-                fontSize: 14, 
+                fontSize: 16, 
                 fontWeight: 'bold',
             },
 
@@ -48,17 +48,11 @@ container: {
                 borderRightWidth: StyleSheet.hairlineWidth, 
                 borderRadius: 5,
                 marginLeft: 10,
-                backgroundColor: 'rgba(255,255,255,0.20)',
+                backgroundColor: '#F8F8F8',
                 width: 60,
                 height: 60,
                 justifyContent: 'center',
                 alignItems: 'center',
-            },
-
-            year: {
-                color: '#AAAAAA',
-                fontSize: 14, 
-                fontWeight: 'bold',
             },
             
 
@@ -75,7 +69,7 @@ container: {
             fontWeight: 'bold',
             borderBottomWidth: StyleSheet.hairlineWidth,
             padding: 15,
-            color: '#006DFF'
+            color: 'rgba(0, 109, 255, 0.6)'
         },
 
         billsList: {
@@ -116,6 +110,7 @@ container: {
         justifyContent: 'center',
         paddingLeft: 10,
         paddingRight: 20,
+        backgroundColor: '#F8F8F8',
     },
 
         bottomButton: {
@@ -124,18 +119,18 @@ container: {
             borderLeftWidth: StyleSheet.hairlineWidth,
             borderRightWidth: StyleSheet.hairlineWidth, 
             borderRadius: 5,
+            backgroundColor: '#F8F8F8',
             marginLeft: 10,
-            backgroundColor: 'rgba(0, 109, 255, 0.5)',
             padding: 10,
-            width: 100,
-            height: 100,
+            width: 120,
+            height: 120,
             justifyContent: 'space-around',
             alignItems: 'center',
         }, 
 
         buttonText: {
             fontSize: 10,
-            color: '#FFF'
+            color: 'rgba(0, 109, 255, 0.6)'
         },    
 })
 
