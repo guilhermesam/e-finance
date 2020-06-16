@@ -2,11 +2,14 @@ import React from 'react'
 import { FlatList, Text, TouchableOpacity, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
+import moment from 'moment'
+import 'moment/locale/pt-br'
 import styles from './styles'
 
 export default function Home() {
 
     const navigation = useNavigation();
+    const today = moment().locale('pt-br').format('ddd, D [de] MMM')
     
     function navigateToBill() {
         navigation.navigate('Bill')
@@ -40,8 +43,7 @@ export default function Home() {
                     </TouchableOpacity>  
                 </View>
                 <View style={styles.dateContainer}>
-                    <Text style={styles.month}>JUN</Text>
-                    <Text style={styles.year}>2020</Text>
+                    <Text style={styles.year}>{today}</Text>
                 </View>
             </View>
             <View style={styles.form}>

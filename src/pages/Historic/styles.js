@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     },
 
         mainFrame: {
-            flex: 12,
+            flex: 1,
             marginTop: 50,
             flexDirection: "column",
             alignSelf: 'stretch',

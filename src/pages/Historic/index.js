@@ -6,22 +6,22 @@ import styles from './styles';
 
 export default function Historic() {
 
-    const renderItem = ({ item: bills }) => (
+    const renderItem = ({ item }) => (
         <View style={styles.billsList}>
             <View style={styles.establishmentInfo}>
-                <Text style={styles.mainText}>{bills.name}</Text>
-                <Text style={styles.subText}>{bills.establishmentType}</Text>
+                <Text style={styles.mainText}>{item.name}</Text>
+                <Text style={styles.subText}>{item.establishmentType}</Text>
             </View>
             <View style={styles.buyInfo}>
-                <Text style={styles.mainText}>{bills.value}</Text>
-                <Text style={styles.subText}>{bills.date}</Text>
+                <Text style={styles.mainText}>{item.value}</Text>
+                <Text style={styles.subText}>{item.date}</Text>
             </View>
             <TouchableOpacity>
                 <Feather name="trash-2" size={20} color="red"/>
             </TouchableOpacity> 
         </View>
     )
-
+    
     return (
         <View style={styles.container}>
             <View style={styles.mainFrame}>
@@ -35,14 +35,13 @@ export default function Historic() {
                 <FlatList
                     data={bills}
                     keyExtractor={bills => String(bills.id)}
-                    renderItem={renderItem}
-                />
+                    renderItem={renderItem} />
             </View>
-            <TouchableOpacity style={styles.clearHistoryButton}>
-                <Text>Limpar Histórico</Text>
-                <Feather name="trash-2" size={20} color="black"/>
-            </TouchableOpacity>
-        </View>
+                <TouchableOpacity style={styles.clearHistoryButton}>
+                    <Text>Limpar Histórico</Text>
+                    <Feather name="trash-2" size={20} color="black"/>
+                </TouchableOpacity>
+            </View>
     ) 
 }
 

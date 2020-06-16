@@ -14,23 +14,11 @@ container: {
         alignItems: 'stretch',
     },
 
-        dateContainer: {
-            flex: 1,
-            flexDirection: 'row',
-            alignItems: 'flex-end',
-            alignSelf: 'center',
-        },
-
-            month: {
-                color: '#C0C0C0',
-                fontSize: 24,
-                fontWeight: 'bold',
-            },
-
             year: {
-                color: '#AAAAAA',
-                fontSize: 16, 
+                color: 'gray',
+                fontSize: 18, 
                 fontWeight: 'bold',
+                alignSelf: 'center',
             },
 
         topButtonContainer: {
