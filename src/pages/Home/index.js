@@ -4,7 +4,10 @@ import { useNavigation } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
 import moment from 'moment'
 import 'moment/locale/pt-br'
+
+import Bill from '../../components/Bill'
 import styles from './styles'
+
 
 export default function Home() {
 
@@ -50,22 +53,7 @@ export default function Home() {
                 <Text style={styles.headerText}>
                     Lançamentos Pendentes
                 </Text>
-                <FlatList
-                    data={bills}
-                    keyExtractor={bills => String(bills.id)}
-                    renderItem={({ item: bills }) => (
-                        <View style={styles.billsList}>
-                            <View style={styles.establishmentInfo}>
-                                <Text style={styles.mainText}>{bills.name}</Text>
-                                <Text style={styles.subText}>{bills.establishmentType}</Text>
-                            </View>
-                            <View style={styles.buyInfo}>
-                                <Text style={styles.mainText}>{bills.value}</Text>
-                                <Text style={styles.subText}>{bills.date}</Text>
-                            </View>
-                        </View>
-                    )}
-                />
+                
             </View>
             <View style={styles.bottomButtonContainer}>
                 <TouchableOpacity style={styles.bottomButton} onPress={navigateToBill}>
@@ -85,6 +73,23 @@ export default function Home() {
         </View>
     )
 }
+
+{/* <FlatList
+                    data={bills}
+                    keyExtractor={bills => String(bills.id)}
+                    renderItem={({ item: bills }) => (
+                        <View style={styles.billsList}>
+                            <View style={styles.establishmentInfo}>
+                                <Text style={styles.mainText}>{bills.name}</Text>
+                                <Text style={styles.subText}>{bills.establishmentType}</Text>
+                            </View>
+                            <View style={styles.buyInfo}>
+                                <Text style={styles.mainText}>{bills.value}</Text>
+                                <Text style={styles.subText}>{bills.date}</Text>
+                            </View>
+                        </View>
+                    )}
+                /> */}
 
 const bills = [
     {
