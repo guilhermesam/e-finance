@@ -8,7 +8,7 @@ export default function Statistics() {
         <View style={styles.container}>
             <View style={styles.mainFrame}>
                 <View style={styles.graphicContainer}>
-                    <Progress.Circle size={100} progress={0.8} showsText={true} 
+                    <Progress.Circle size={100} progress={0.76} showsText={true} 
                     color={'#006dff'}/>
                     <Text style={styles.graphicLabel}>Quitação do mês atual</Text>
                 </View>

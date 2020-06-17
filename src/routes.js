@@ -1,30 +1,33 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import * as React from 'react';
+import { Button, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import React from 'react'
+import { NavigationContainer } from '@react-navigation/native';
 
-import Bill from './pages/Bill';
 import Home from './pages/Home';
+import Bill from './pages/Bill';
 import Help from './pages/Help';
-import Historic from './pages/Historic'
-import Login from './pages/Login';
-import Settings from './pages/Settings'
-import Statistics from './pages/Statistics'
+import Historic from './pages/Historic';
+import Settings from './pages/Settings';
+import Statistics from './pages/Statistics';
 
-const AppStack = createStackNavigator();
 
-export default function Routes(){
-    return(
-        <NavigationContainer>
-            <AppStack.Navigator screenOptions={ {headerShown: false} }>
-                <AppStack.Screen name="Home" component={Home} />
-                <AppStack.Screen name="Login" component={Login} />
-                <AppStack.Screen name="Bill" component={Bill} />
-                <AppStack.Screen name="Help" component={Help} />
-                <AppStack.Screen name="Settings" component={Settings} />
-                <AppStack.Screen name="Historic" component={Historic} />
-                <AppStack.Screen name="Statistics" component={Statistics} />
-            </AppStack.Navigator>            
-        </NavigationContainer>
-    );
+
+
+
+const Drawer = createDrawerNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Bill" component={Bill} />
+        <Drawer.Screen name="Help" component={Help} />
+        <Drawer.Screen name="Historic" component={Historic} />
+        <Drawer.Screen name="Statistics" component={Statistics} />
+        <Drawer.Screen name="Settings" component={Settings} />
+        
+      </Drawer.Navigator>
+    </NavigationContainer>
+  );
 }
