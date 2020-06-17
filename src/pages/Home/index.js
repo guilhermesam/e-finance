@@ -1,14 +1,14 @@
 import React from 'react'
-import { FlatList, Text, TouchableOpacity, View } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
-import { Feather } from '@expo/vector-icons'
-import moment from 'moment'
-import 'moment/locale/pt-br'
-
-import Bill from '../../components/Bill'
+import { FlatList, Text, View } from 'react-native';
 import styles from './styles'
 
-export default function Home({ navigation }) {    
+export default function Home({ navigation }) {
+
+  
+   
+    
+    
+    
 
     return (
         <View style={styles.container}>
@@ -23,15 +23,7 @@ export default function Home({ navigation }) {
                 <Text style={styles.headerText}>
                     Lançamentos Pendentes
                 </Text>
-                
-            </View>
-           
-            
-        </View>
-    )
-}
-
-{/* <FlatList
+                <FlatList
                     data={bills}
                     keyExtractor={bills => String(bills.id)}
                     renderItem={({ item: bills }) => (
@@ -46,7 +38,13 @@ export default function Home({ navigation }) {
                             </View>
                         </View>
                     )}
-                /> */}
+                />
+            </View>
+           
+            
+        </View>
+    )
+}
 
 const bills = [
     {
