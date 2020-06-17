@@ -14,11 +14,23 @@ container: {
         alignItems: 'stretch',
     },
 
-            year: {
-                color: 'gray',
-                fontSize: 18, 
+        dateContainer: {
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            alignSelf: 'center',
+        },
+
+            month: {
+                color: '#C0C0C0',
+                fontSize: 22,
                 fontWeight: 'bold',
-                alignSelf: 'center',
+            },
+
+            year: {
+                color: '#AAAAAA',
+                fontSize: 14, 
+                fontWeight: 'bold',
             },
 
         topButtonContainer: {
@@ -36,11 +48,17 @@ container: {
                 borderRightWidth: StyleSheet.hairlineWidth, 
                 borderRadius: 5,
                 marginLeft: 10,
-                backgroundColor: '#F8F8F8',
+                backgroundColor: 'rgba(255,255,255,0.20)',
                 width: 60,
                 height: 60,
                 justifyContent: 'center',
                 alignItems: 'center',
+            },
+
+            year: {
+                color: '#AAAAAA',
+                fontSize: 14, 
+                fontWeight: 'bold',
             },
             
 
@@ -57,7 +75,7 @@ container: {
             fontWeight: 'bold',
             borderBottomWidth: StyleSheet.hairlineWidth,
             padding: 15,
-            color: 'rgba(0, 109, 255, 0.6)'
+            color: '#006DFF'
         },
 
         billsList: {
@@ -98,7 +116,6 @@ container: {
         justifyContent: 'center',
         paddingLeft: 10,
         paddingRight: 20,
-        backgroundColor: '#F8F8F8',
     },
 
         bottomButton: {
@@ -107,18 +124,18 @@ container: {
             borderLeftWidth: StyleSheet.hairlineWidth,
             borderRightWidth: StyleSheet.hairlineWidth, 
             borderRadius: 5,
-            backgroundColor: '#F8F8F8',
             marginLeft: 10,
+            backgroundColor: 'rgba(0, 109, 255, 0.5)',
             padding: 10,
-            width: 120,
-            height: 120,
+            width: 100,
+            height: 100,
             justifyContent: 'space-around',
             alignItems: 'center',
         }, 
 
         buttonText: {
             fontSize: 10,
-            color: 'rgba(0, 109, 255, 0.6)'
+            color: '#FFF'
         },    
 })
 

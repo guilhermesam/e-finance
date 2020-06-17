@@ -8,45 +8,15 @@ import 'moment/locale/pt-br'
 import Bill from '../../components/Bill'
 import styles from './styles'
 
-
-export default function Home() {
-
-    const navigation = useNavigation();
-    const today = moment().locale('pt-br').format('ddd, D [de] MMM')
-    
-    function navigateToBill() {
-        navigation.navigate('Bill')
-    }
-
-    function navigateToSettings() {
-        navigation.navigate('Settings')
-    }
-
-    function navigateToHelp() {
-        navigation.navigate('Help')
-    }
-
-    function navigateToStatistics() {
-        navigation.navigate('Statistics')
-    }
-
-    function navigateToHistoric() {
-        navigation.navigate('Historic')
-    }
+export default function Home({ navigation }) {    
 
     return (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
-                <View style={styles.topButtonContainer}>
-                    <TouchableOpacity style={styles.topButton} onPress={navigateToHelp}>
-                        <Feather name="help-circle" size={35} color="rgba(0, 109, 255, 0.6)"/>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.topButton} onPress={navigateToSettings}>
-                        <Feather name="settings" size={35} color="rgba(0, 109, 255, 0.6)"/>
-                    </TouchableOpacity>  
-                </View>
+          
                 <View style={styles.dateContainer}>
-                    <Text style={styles.year}>{today}</Text>
+                    <Text style={styles.month}>JUN</Text>
+                    <Text style={styles.year}>2020</Text>
                 </View>
             </View>
             <View style={styles.form}>
@@ -55,20 +25,7 @@ export default function Home() {
                 </Text>
                 
             </View>
-            <View style={styles.bottomButtonContainer}>
-                <TouchableOpacity style={styles.bottomButton} onPress={navigateToBill}>
-                    <Feather name="plus-circle" size={45} color="#rgba(0, 109, 255, 0.6)"/>
-                    <Text style={styles.buttonText}>Adicionar Conta</Text>
-                </TouchableOpacity> 
-                <TouchableOpacity style={styles.bottomButton} onPress={navigateToStatistics}>
-                    <Feather name="pie-chart" size={45} color="#rgba(0, 109, 255, 0.6)"/>
-                    <Text style={styles.buttonText}>Estatísticas</Text>
-                </TouchableOpacity>       
-                <TouchableOpacity style={styles.bottomButton} onPress={navigateToHistoric}>
-                    <Feather name="clock" size={45} color="#rgba(0, 109, 255, 0.6)"/>
-                    <Text style={styles.buttonText}>Histórico</Text>
-                </TouchableOpacity>                
-            </View>
+           
             
         </View>
     )
@@ -205,10 +162,3 @@ const bills = [
         date: '01/06/2020'
     },
 ]
-
-{/* <TouchableOpacity style={styles.button} onPress={navigateToBill}>
-                <Feather name="plus" size={35} color="#FFF" />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={navigateToStatistics}>
-                <Feather name="plus" size={35} color="#FFF" />
-            </TouchableOpacity> */}

@@ -4,8 +4,8 @@ import { Feather } from '@expo/vector-icons'
 
 import styles from './styles';
 
-export default function Historic() {
-
+export default function Historic({ navigation }) {
+    
     const renderItem = ({ item }) => (
         <View style={styles.billsList}>
             <View style={styles.establishmentInfo}>

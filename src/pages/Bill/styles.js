@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import Fonts from '@expo-google-fonts/roboto';
+
 
 
 export default StyleSheet.create ({
@@ -27,8 +27,7 @@ export default StyleSheet.create ({
         marginBottom: 2,
         marginVertical: 17,
         marginLeft: 10,
-        color: '#874e84',
-        fontFamily: 'Roboto'
+        color: '#874e84'
             
         },
 
