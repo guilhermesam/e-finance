@@ -1,7 +1,5 @@
 import {StyleSheet} from 'react-native';
 
-
-
 export default StyleSheet.create ({
 
     container: {
@@ -10,26 +8,45 @@ export default StyleSheet.create ({
         backgroundColor: '#F8F8F8'
     },
 
-        form: {
+        mainFrame: {
             flex: 1,
             alignSelf: 'stretch',
             marginHorizontal: 30,
             borderRadius: 16,
             height: 550,
             margin: 50,
-            justifyContent: 'center',
-            alignItems: 'stretch',
-            
+            justifyContent: 'center',            
         },
 
-    
-        billTitle : {
-        marginBottom: 2,
-        marginVertical: 17,
-        marginLeft: 10,
-        color: '#874e84'
-            
+        billsList: {
+            padding: 5,
+            flexDirection: 'row',
+            marginHorizontal: 10,
+            alignItems: 'center'
         },
+
+            buyInfo:{
+                flex: 1,
+            },
+
+            mainText: {
+                fontSize: 12,
+                marginBottom: 5,
+            },
+
+            subText: {
+                fontSize: 10,
+                color: '#AAAAAA',
+                marginTop: 3
+            }, 
+
+                value: {
+                    fontSize: 12,
+                },
+
+            establishmentInfo: {
+                flex: 1
+            },
 
     input : {
         marginBottom: 2,
@@ -53,13 +70,11 @@ export default StyleSheet.create ({
     },
 
     formButton : {
-    marginTop: 30,
-        justifyContent: "space-between",
-        flexDirection: 'row',
-        marginHorizontal: 10
+        marginTop: 30,
+            justifyContent: "space-between",
+            flexDirection: 'row',
+            marginHorizontal: 10
     },
-
-
 
     ButtonConfirm:{
     backgroundColor: '#4cd964',

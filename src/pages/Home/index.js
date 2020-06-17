@@ -1,47 +1,45 @@
 import React from 'react'
 import { FlatList, Text, View } from 'react-native';
 import styles from './styles'
+import Bill from '../../components/Bill'
+import { Feather } from '@expo/vector-icons'
+import moment from 'moment'
+import 'moment/locale/pt-br'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Home({ navigation }) {
 
-  
-   
-    
-    
-    
+    const today = moment().locale('pt-br').format('ddd, D [de] MMM')
+
+    const renderItem = ({ item: bills }) => (
+        <Bill establishmentName={bills.name} establishmentType={bills.establishmentType}
+        value={bills.value} date={bills.date}/>
+    )
 
     return (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
-          
-                <View style={styles.dateContainer}>
-                    <Text style={styles.month}>JUN</Text>
-                    <Text style={styles.year}>2020</Text>
-                </View>
+                <TouchableOpacity style={styles.openDrawerButton} onPress={() => navigation.openDrawer()}>
+                    <Feather name="menu" size={30} color="#5C5C5C"/>
+                </TouchableOpacity> 
+                <Text style={styles.today}>{today}</Text>
             </View>
-            <View style={styles.form}>
+
+            <View style={styles.mainFrame}>
                 <Text style={styles.headerText}>
                     Lançamentos Pendentes
                 </Text>
                 <FlatList
                     data={bills}
                     keyExtractor={bills => String(bills.id)}
-                    renderItem={({ item: bills }) => (
-                        <View style={styles.billsList}>
-                            <View style={styles.establishmentInfo}>
-                                <Text style={styles.mainText}>{bills.name}</Text>
-                                <Text style={styles.subText}>{bills.establishmentType}</Text>
-                            </View>
-                            <View style={styles.buyInfo}>
-                                <Text style={styles.mainText}>{bills.value}</Text>
-                                <Text style={styles.subText}>{bills.date}</Text>
-                            </View>
-                        </View>
-                    )}
+                    renderItem={renderItem}
                 />
-            </View>
-           
-            
+            </View>   
+            <View style={styles.bottomButtonContainer}>
+                <TouchableOpacity style={styles.addBillButton} onPress={() => navigation.navigate("Adicionar Conta")}>
+                    <Feather name="plus" size={30} color="white"/>
+                </TouchableOpacity> 
+            </View>   
         </View>
     )
 }
@@ -56,15 +54,15 @@ const bills = [
     }, 
     {
         id: 2,
-        name: 'Restaurante ABC',
-        establishmentType: 'Restaurante',
+        name: 'Balada Boa',
+        establishmentType: 'Boate',
         value: 'R$ 1000,00',
         date: '01/06/2020'
     },
     {
         id: 3,
-        name: 'Mercado Tupi',
-        establishmentType: 'Mercado',
+        name: 'Lancheria Chamichu',
+        establishmentType: 'Lancheria',
         value: 'R$ 1000,00',
         date: '01/06/2020'
     }, 
@@ -160,3 +158,4 @@ const bills = [
         date: '01/06/2020'
     },
 ]
+

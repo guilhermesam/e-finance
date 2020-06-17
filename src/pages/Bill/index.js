@@ -3,7 +3,7 @@ import { Text,  View, TextInput, TouchableOpacity, Picker} from 'react-native';
 import styles from './styles';
 import DatePicker from 'react-native-datepicker';
 
-export default function Bill () {   
+export default function Bill ( {navigation }) {   
 
     return (
         <View style={styles.container}>
@@ -11,7 +11,7 @@ export default function Bill () {
 
         </View> */}
                
-            <View style={styles.form}>
+            <View style={styles.mainFrame}>
                 <Text style={styles.billTitle}>Nome do estabelecimento:</Text>
                 <TextInput style={styles.input} placeholder="Insira um nome" placeholderTextColor='#999' autoCapitalize="words" autoCorrect={false}/>
 

@@ -4,139 +4,79 @@ const styles = StyleSheet.create({
     
 container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     backgroundColor: 'white'
 },
-    headerContainer: {
-        flex: 1,
-        paddingLeft: 10,
-        paddingRight: 20,
-        alignItems: 'stretch',
-    },
-
-        dateContainer: {
-            flex: 1,
-            flexDirection: 'row',
-            alignItems: 'flex-end',
-            alignSelf: 'center',
+        headerContainer: {
+            flex: 2,
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            marginTop: 40
         },
 
-            month: {
-                color: '#C0C0C0',
-                fontSize: 22,
+            openDrawerButton: {
+                padding: 10
+            },
+
+            today: {
+                color: '#5C5C5C',
+                fontSize: 24,
                 fontWeight: 'bold',
-            },
-
-            year: {
-                color: '#AAAAAA',
-                fontSize: 14, 
-                fontWeight: 'bold',
-            },
-
-        topButtonContainer: {
-                flex: 1,
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'flex-end',
-                marginTop: 30
-            },
-
-            topButton: {
-                borderBottomWidth: StyleSheet.hairlineWidth,
-                borderTopWidth: StyleSheet.hairlineWidth,
-                borderLeftWidth: StyleSheet.hairlineWidth,
-                borderRightWidth: StyleSheet.hairlineWidth, 
-                borderRadius: 5,
-                marginLeft: 10,
-                backgroundColor: 'rgba(255,255,255,0.20)',
-                width: 60,
-                height: 60,
-                justifyContent: 'center',
-                alignItems: 'center',
-            },
-
-            year: {
-                color: '#AAAAAA',
-                fontSize: 14, 
-                fontWeight: 'bold',
+                alignSelf: 'center'
             },
             
-
-    form: {
-        flex: 3,
-        alignSelf: 'stretch',
+    mainFrame: {
+        flex: 8,
         borderRadius: 16,
-        backgroundColor: '#FFF',
-        marginTop: 50,
     },
 
         headerText: {
             fontSize: 16,
+            marginTop: 40,
             fontWeight: 'bold',
             borderBottomWidth: StyleSheet.hairlineWidth,
             padding: 15,
             color: '#006DFF'
         },
-
-        billsList: {
-            padding: 5,
-            flexDirection: 'row',
-            marginHorizontal: 10,
-        },
-
-            buyInfo:{
-                flex: 1,
-                alignSelf: 'flex-end'
-            },
-
-                value: {
-                    fontSize: 12,
-                },
-
-            establishmentInfo: {
-                flex: 1
-            },
-    
-                mainText: {
-                    fontSize: 12,
-                    marginBottom: 5,
-                },
-
-                subText: {
-                    fontSize: 10,
-                    color: '#AAAAAA',
-                    borderBottomWidth: StyleSheet.hairlineWidth,
-                    marginBottom: 5,
-                }, 
     
     bottomButtonContainer: {
-        flex: 1,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingLeft: 10,
-        paddingRight: 20,
+        position: 'absolute',
+        alignSelf: 'flex-end',
+        justifyContent: 'flex-end',
+        padding: 20
     },
 
-        bottomButton: {
-            borderBottomWidth: StyleSheet.hairlineWidth,
-            borderTopWidth: StyleSheet.hairlineWidth,
-            borderLeftWidth: StyleSheet.hairlineWidth,
-            borderRightWidth: StyleSheet.hairlineWidth, 
-            borderRadius: 5,
-            marginLeft: 10,
-            backgroundColor: 'rgba(0, 109, 255, 0.5)',
-            padding: 10,
-            width: 100,
-            height: 100,
-            justifyContent: 'space-around',
-            alignItems: 'center',
-        }, 
-
-        buttonText: {
-            fontSize: 10,
-            color: '#FFF'
-        },    
+    addBillButton: {
+        borderRadius: 45,
+        marginLeft: 10,
+        backgroundColor: '#006DFF',
+        width: 70,
+        height: 70,
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
 })
 
 export default styles
+
+// topButtonContainer: {
+        //         flex: 1,
+        //         flexDirection: 'row',
+        //         alignItems: 'center',
+        //         justifyContent: 'flex-end',
+        //         marginTop: 30
+        //     },
+
+        //     topButton: {
+                // borderBottomWidth: StyleSheet.hairlineWidth,
+                // borderTopWidth: StyleSheet.hairlineWidth,
+                // borderLeftWidth: StyleSheet.hairlineWidth,
+                // borderRightWidth: StyleSheet.hairlineWidth, 
+                // borderRadius: 5,
+                // marginLeft: 10,
+                // backgroundColor: 'rgba(255,255,255,0.20)',
+                // width: 60,
+                // height: 60,
+                // justifyContent: 'center',
+                // alignItems: 'center',
+        //     },

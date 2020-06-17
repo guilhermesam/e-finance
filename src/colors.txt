@@ -1,1 +1,2 @@
-#612f74 - roxo
+#006DFF - azul
+#F8F8F8 - branco
