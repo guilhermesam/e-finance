@@ -2,15 +2,13 @@ import React from 'react';
 import { Text,  View, TextInput, TouchableOpacity, Picker} from 'react-native';
 import styles from './styles';
 import DatePicker from 'react-native-datepicker';
+import ConfirmButton from '../../components/Buttons/ConfirmButton'
+import CancelButton from '../../components/Buttons/CancelButton'
 
-export default function Bill ( {navigation }) {   
+export default function AddBill ( {navigation }) {   
 
     return (
         <View style={styles.container}>
-        {/* <View style={styles.headerContainer}>
-
-        </View> */}
-               
             <View style={styles.mainFrame}>
                 <Text style={styles.billTitle}>Nome do estabelecimento:</Text>
                 <TextInput style={styles.input} placeholder="Insira um nome" placeholderTextColor='#999' autoCapitalize="words" autoCorrect={false}/>
@@ -38,12 +36,8 @@ export default function Bill ( {navigation }) {
                 autoCorrect={false} keyboardType="phone-pad"/>
                 
                 <View style={styles.formButton}>
-                    <TouchableOpacity style={styles.ButtonConfirm} onPress={() => {}}>
-                        <Text style={styles.textButton}>Salvar</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.ButtonCancel} onPress={() => {}}>
-                        <Text style={styles.textButton}>Cancelar</Text>
-                    </TouchableOpacity>                
+                    <ConfirmButton text="Adicionar" onPress={() => navigation.navigate("Página Inicial")}/>
+                    <CancelButton text="Cancelar" onPress={() => navigation.navigate("Página Inicial")}/>        
                 </View>           
             </View>
     </View>                  

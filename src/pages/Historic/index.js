@@ -1,25 +1,24 @@
 import React from 'react';
 import { FlatList, Picker, Text, TouchableOpacity, View } from 'react-native';
-import { Feather } from '@expo/vector-icons'
+import Bill from '../../components/Containers/Bill'
+import ClearHistoryButton from '../../components/Buttons/ClearHistoryButton'
 
 import styles from './styles';
 
 export default function Historic({ navigation }) {
     
-    const renderItem = ({ item }) => (
-        <View style={styles.billsList}>
-            <View style={styles.establishmentInfo}>
-                <Text style={styles.mainText}>{item.name}</Text>
-                <Text style={styles.subText}>{item.establishmentType}</Text>
-            </View>
-            <View style={styles.buyInfo}>
-                <Text style={styles.mainText}>{item.value}</Text>
-                <Text style={styles.subText}>{item.date}</Text>
-            </View>
-            <TouchableOpacity>
-                <Feather name="trash-2" size={20} color="red"/>
-            </TouchableOpacity> 
-        </View>
+    // deleteBill = billId => {
+    //     const bills = [...bills]
+    //     bills.forEach(bills => {
+    //         if (bill.id === billId) {
+                
+    //         }
+    //     });
+    // }
+
+    const renderItem = ({ item: bills }) => (
+        <Bill establishmentName={bills.name} establishmentType={bills.establishmentType}
+        value={bills.value} date={bills.date} enableDelete={true}/>
     )
     
     return (
@@ -37,10 +36,7 @@ export default function Historic({ navigation }) {
                     keyExtractor={bills => String(bills.id)}
                     renderItem={renderItem} />
             </View>
-                <TouchableOpacity style={styles.clearHistoryButton}>
-                    <Text>Limpar Histórico</Text>
-                    <Feather name="trash-2" size={20} color="black"/>
-                </TouchableOpacity>
+                <ClearHistoryButton />
             </View>
     ) 
 }

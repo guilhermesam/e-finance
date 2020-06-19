@@ -1,11 +1,11 @@
 import React from 'react'
 import { FlatList, Text, View } from 'react-native';
 import styles from './styles'
-import Bill from '../../components/Bill'
+import Bill from '../../components/Containers/Bill'
 import { Feather } from '@expo/vector-icons'
 import moment from 'moment'
 import 'moment/locale/pt-br'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native';
 
 export default function Home({ navigation }) {
 

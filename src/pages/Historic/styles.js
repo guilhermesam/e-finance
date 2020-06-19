@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
             marginTop: 50,
             flexDirection: "column",
             alignSelf: 'stretch',
-            marginHorizontal: 30,
+            marginHorizontal: 10,
             borderRadius: 16,
             backgroundColor: '#f8f8f8',
             height: 550,
@@ -22,59 +22,8 @@ const styles = StyleSheet.create({
         },
 
             billPicker:{
-                marginLeft: 10,  
+                marginLeft: 15,  
             },
-
-            billsList: {
-                padding: 5,
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                marginHorizontal: 10,
-            },
-    
-                buyInfo:{
-                    flex: 1,
-                    alignItems: 'center',
-                },
-    
-                    value: {
-                        fontSize: 12,
-                    },
-    
-                establishmentInfo: {
-                    flex: 1,
-                    alignItems: 'flex-start'
-                },
-        
-                    mainText: {
-                        fontSize: 12,
-                        marginBottom: 5,
-                    },
-    
-                    subText: {
-                        fontSize: 10,
-                        color: '#AAAAAA',
-                        marginBottom: 5,
-                    }, 
-                
-                trashButton: {
-                    flex: 1
-                },
-        
-                clearHistoryButton: {
-                    flexDirection: 'row',
-                    borderRadius: 10,
-                    backgroundColor: 'rgba(0,0,0,0.2)',
-                    borderBottomWidth: StyleSheet.hairlineWidth,
-                    borderTopWidth: StyleSheet.hairlineWidth,
-                    borderLeftWidth: StyleSheet.hairlineWidth,
-                    borderRightWidth: StyleSheet.hairlineWidth,
-                    marginHorizontal: 10,
-                    padding: 15,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    alignSelf: 'stretch'
-                }
 })
 
 export default styles;

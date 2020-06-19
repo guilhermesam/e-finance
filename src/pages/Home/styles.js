@@ -28,6 +28,7 @@ container: {
     mainFrame: {
         flex: 8,
         borderRadius: 16,
+        marginHorizontal: 10
     },
 
         headerText: {
