@@ -4,7 +4,7 @@ import { Feather } from '@expo/vector-icons'
 
 export default props => {
     return (
-        <TouchableOpacity style={styles.clearHistoryButton}>
+        <TouchableOpacity style={styles.clearHistoryButton} onPress={props.onPress}>
             <Text>Limpar Histórico</Text>
             <Feather name="trash-2" size={props.size} color={props.color}/>
         </TouchableOpacity>

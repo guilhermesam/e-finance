@@ -1,11 +1,12 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../constants/colors'
 
 export default StyleSheet.create ({
 
     container: {
         flex: 1,
-        justifyContent: 'center',
-        backgroundColor: '#F8F8F8'
+        justifyContent: 'flex-end',
+        backgroundColor: colors.backgroundContainer
     },
 
         mainFrame: {

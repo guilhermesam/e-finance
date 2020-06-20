@@ -1,52 +1,42 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native'
+import colors from '../../constants/colors'
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        backgroundColor: '#006DFF'
+        backgroundColor: colors.backgroundContainer
     },
 
-        mainFrame: {
-            flexDirection: "column",
-            alignSelf: 'stretch',
-            marginHorizontal: 30,
-            borderRadius: 16,
-            backgroundColor: '#f8f8f8',
-            height: 550,
-            justifyContent: 'flex-start',
-            alignItems: 'stretch',
+    graphicContainer: {
+        flex: 1,
+        marginHorizontal: 30,
+        marginTop: 30,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+        graphicLabel: {
+            fontSize: 12,
+            color: 'gray',
+            marginTop: 10
         },
 
-            graphicContainer: {
-                flex: 1,
-                marginHorizontal: 30,
-                alignItems: 'stretch',
-                justifyContent: 'center',
-            },
+    infoContainer: {
+        flex: 1,
+        marginHorizontal: 30,
+        marginVertical: 30
+    },
 
-                graphicLabel: {
-                    fontSize: 12,
-                    color: 'gray',
-                    marginTop: 10
-                },
-
-            infoContainer: {
-                flex: 1,
-                alignItems: 'stretch',
-                marginHorizontal: 30
-            },
-
-                infoLabel: {
-                    fontSize: 14,
-                    color: '#999',
-                    marginTop: 15
-                },
-                
-                infoText: {
-                    fontSize: 18,
-                    color: '#006dff'
-                },
+        infoLabel: {
+            fontSize: 14,
+            color: '#999',
+            marginTop: 15
+        },
+        
+        infoText: {
+            fontSize: 18,
+            color: '#006dff'
+        },
 
 })
 

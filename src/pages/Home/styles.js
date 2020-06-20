@@ -1,12 +1,14 @@
 import { StyleSheet } from 'react-native'
+import colors from '../../constants/colors'
 
 const styles = StyleSheet.create({
-    
-container: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    backgroundColor: 'white'
-},
+
+    container: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        backgroundColor: colors.backgroundContainer
+    },
+
         headerContainer: {
             flex: 2,
             flexDirection: 'column',
@@ -19,9 +21,7 @@ container: {
             },
 
             today: {
-                color: '#5C5C5C',
                 fontSize: 24,
-                fontWeight: 'bold',
                 alignSelf: 'center'
             },
             
